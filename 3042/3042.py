@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-def normaliza(atual, posicao_invalida, posicao_valida, alteracao):
-    if atual == posicao_invalida:
-        return posicao_valida
-    return atual + alteracao
+def normaliza(nova_posicao):
+    if nova_posicao == -1:
+        return 2
+    if nova_posicao == 3:
+        return 0
+    return nova_posicao
 
 
 while (True):
@@ -23,8 +25,8 @@ while (True):
         if caminho[i].count('0') == 1:
             atual = caminho[i].index('0')
         else:
-            esquerda = normaliza(antes, 0, 2, -1)
-            direita = normaliza(antes, 2, 0, 1)
+            esquerda = normaliza(antes - 1)
+            direita = normaliza(antes + 1)
             proxima = caminho[i + 1]
             if proxima[esquerda] == '0' and abs(antes - esquerda) < abs(antes - direita):
                 atual = esquerda
