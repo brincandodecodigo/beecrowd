@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-def normaliza(nova_posicao):
-    if nova_posicao == -1:
+def normaliza(posicao):
+    if posicao == -1:
         return 2
-    if nova_posicao == 3:
+    if posicao == 3:
         return 0
-    return nova_posicao
+    return posicao
 
 
 while (True):
@@ -12,26 +12,24 @@ while (True):
     if m == 0:
         break
     caminho = []
-    for aux in range(m):
+    for i in range(m):
         caminho.append(input().split())
 
     atual = 1
     movs = 0
-    for i in range(len(caminho)):
+    for i in range(m):
         if caminho[i][atual] == '0':
             continue
-
-        antes = atual
+        anterior = atual
         if caminho[i].count('0') == 1:
             atual = caminho[i].index('0')
         else:
-            esquerda = normaliza(antes - 1)
-            direita = normaliza(antes + 1)
+            esquerda = normaliza(anterior - 1)
+            direita = normaliza(anterior + 1)
             proxima = caminho[i + 1]
-            if proxima[esquerda] == '0' and abs(antes - esquerda) < abs(antes - direita):
+            if proxima[esquerda] == '0' and abs(anterior - esquerda) < abs(anterior - direita):
                 atual = esquerda
             else:
                 atual = direita
-
-        movs += abs(atual - antes)
+        movs += abs(atual - anterior)
     print(movs)
