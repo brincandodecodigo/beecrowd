@@ -4,4 +4,4 @@ Código fonte das soluções que foram desenvolvidas e gravadas para o o canal [
 
 ## Python
 
- - [**BEE 3042** (Desviando de Árvores de Natal)](https://www.beecrowd.com.br/judge/pt/problems/view/3042): [[**código fonte**]](/3042/3042.py) [[**vídeo**]](https://youtu.be/ZEKcqo7kAfI).
+ - [**BEE 3042** (Desviando de Árvores de Natal)](https://www.beecrowd.com.br/judge/pt/problems/view/3042): [[**código fonte**]](/python/3042/3042.py) [[**vídeo**]](https://youtu.be/ZEKcqo7kAfI).
